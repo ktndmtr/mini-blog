@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Home</h1>
+{% if user.is_authenticated %}
+    <p>Welcome to my blogsite, {{ user.username }}.</p>
+{% else %}
+    <p>Welcome to my blogsite.</p>
+{% endif %}
+{% endblock %}
